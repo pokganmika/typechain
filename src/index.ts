@@ -1,12 +1,38 @@
-const sayHi = (name: string, age: number, gender: string): string => {
-  return `Hello ${name}, you are ${age}, you are a ${gender}`;
+interface Human {
+  name: string;
+  age: number;
+  gender: string;
+}
+
+const person = {
+  name: 'M',
+  age: 24,
+  gender: 'male'
 };
 
-console.log(sayHi('M', 24, 'male'));
+const sayHi = (person: Human): string => {
+  return `Hello ${person.name}, you are ${person.age}, you are a ${
+    person.gender
+  }`;
+};
+
+console.log(sayHi(person));
 // void => 빈 공간 같은 것
 // return 이기 때문에 => void 사용 불가!!
 
 export {};
+
+//-----
+
+// const sayHi = (name: string, age: number, gender: string): string => {
+//   return `Hello ${name}, you are ${age}, you are a ${gender}`;
+// };
+
+// console.log(sayHi('M', 24, 'male'));
+// // void => 빈 공간 같은 것
+// // return 이기 때문에 => void 사용 불가!!
+
+// export {};
 
 //-----
 
